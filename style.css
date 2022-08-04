@@ -1,0 +1,121 @@
+/* general style  */
+.dark-brown {
+  background-color: rgb(35, 35, 35);
+}
+
+.brown {
+  background-color: rgb(41, 37, 37);
+}
+
+.div-size {
+  width: 60%;
+  margin: 0 auto;
+  color: white;
+}
+
+.underline {
+  width: 100px;
+  height: 5px;
+  background-color: rgb(139, 90, 0);
+  margin: 10px 0;
+}
+
+.title-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* font face for icon  */
+@font-face {
+  font-family: "vag-handwrittenvaghandwritten";
+  src: url("font/VAG-HandWritten-webfont.eot");
+  src: url("font/VAG-HandWritten-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("font/VAG-HandWritten-webfont.woff2") format("woff2"),
+    url("font/VAG-HandWritten-webfont.woff") format("woff"),
+    url("font/VAG-HandWritten-webfont.ttf") format("truetype"),
+    url("font/VAG-HandWritten-webfont.svg#vag-handwrittenvaghandwritten")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* style for nav  */
+.container-nav {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  z-index: 9999;
+}
+.nav-brand {
+  font-family: "vag-handwrittenvaghandwritten";
+  font-size: 35px;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+}
+.nav-menus {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+}
+.nav-link div {
+  padding: 5px 10px;
+  margin: 0 5px;
+}
+.nav-pills .nav-link.active {
+  background-color: rgb(255, 193, 7) !important;
+  color: rgb(0, 0, 0) !important;
+}
+.nav-link div:hover {
+  border-bottom: 1px solid rgb(255, 193, 7);
+}
+
+/* style for intro */
+.container-jbtron {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.txt-jbtron {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+}
+
+/* style for about me */
+.botme-main {
+  position: relative;
+}
+.container-botme {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+}
+.icon-botme-container {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+.title-botme {
+  position: absolute;
+  transform: translateX(35%);
+}
+.icon {
+  width: 200px;
+  height: 200px;
+  border-radius: 150px;
+  border: 25px solid rgba(109, 71, 0, 0.5);
+}
+
+/* style contact me */
+.contact-info {
+  display: flex;
+  align-items: center;
+}
+.socmed {
+  display: flex;
+  gap: 3rem;
+}
