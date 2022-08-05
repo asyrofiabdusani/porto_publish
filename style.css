@@ -28,6 +28,12 @@
   text-align: center;
 }
 
+a,
+a:active {
+  text-decoration: none;
+  color: white;
+}
+
 /* font face for icon  */
 @font-face {
   font-family: "vag-handwrittenvaghandwritten";
@@ -119,6 +125,13 @@
 .socmed {
   display: flex;
   gap: 3rem;
+}
+.contact-info button {
+  background: transparent;
+  border: 0;
+}
+.copy-button:hover {
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1300px) {
