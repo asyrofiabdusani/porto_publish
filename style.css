@@ -5,7 +5,7 @@
 
 .brown {
   background-color: rgb(41, 37, 37);
-  justify-content: top;
+  /* justify-content: top; */
 }
 
 .div-size {
@@ -59,7 +59,10 @@
   display: flex;
   justify-content: end;
 }
-.nav-menus a {
+.nav-menus a,
+.nav-menus a:hover,
+.nav-menus a:active,
+.nav-menus a:visited {
   text-decoration: none;
   color: white;
 }
@@ -67,7 +70,7 @@
   background-color: rgb(255, 193, 7) !important;
   color: rgb(0, 0, 0) !important;
 }
-.nav-link div:hover {
+.nav-menu:hover {
   border-bottom: 1px solid rgb(255, 193, 7);
 }
 
@@ -116,4 +119,73 @@
 .socmed {
   display: flex;
   gap: 3rem;
+}
+
+@media screen and (max-width: 1300px) {
+  .div-size {
+    width: 70%;
+    margin: 0 auto;
+    color: white;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .div-size {
+    width: 80%;
+    margin: 0 auto;
+    color: white;
+  }
+}
+@media screen and (max-width: 750px) {
+  .div-size {
+    width: 90%;
+    margin: 0 auto;
+    color: white;
+  }
+}
+@media screen and (max-width: 650px) {
+  /* style for intro */
+  .container-jbtron {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "img-jbtron"
+      "txt-jbtron";
+    justify-content: center;
+  }
+  .img-jbtron {
+    grid-area: img-jbtron;
+  }
+  .txt-jbtron {
+    grid-area: txt-jbtron;
+    width: 100%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding: 25px 0;
+    position: relative;
+    z-index: 99;
+    background-color: rgb(35, 35, 35);
+  }
+
+  /* style for about me */
+  .container-botme {
+    display: flex;
+    flex-direction: column;
+  }
+  .icon-botme-container {
+    display: flex;
+  }
+  .title-botme {
+    width: 100%;
+    position: static;
+    transform: translate(0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(41, 37, 37);
+    padding: 10px 0;
+  }
+  .icon {
+    display: none;
+  }
 }
