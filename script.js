@@ -5,13 +5,15 @@ const email = document.querySelector('.email').outerText;
 const copyEmailBt = document.querySelector('.copy-button');
 
 document.addEventListener('scroll', function () {
-    let position = Math.round(window.scrollY);
+    console.log(window.scroll);
+    let position = window.scrollY;
     if (screen.width > 649) {
         botmeCont.style.transform = `translateY(${position - (position / 1.15)}px)`;
     }
 
     if (position < 400) {
-        heroImg.style.transform = `translateY(${position - (position / 20)}px)`;
+        heroImg.style.transform = `translateY(${position - (position / 5)}px)`;
+        heroImg.style.transition = `-500ms`;
     }
 });
 

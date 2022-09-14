@@ -28,8 +28,10 @@
   text-align: center;
 }
 
-a,
-a:active {
+a:hover,
+a:visited,
+a:active,
+a:link {
   text-decoration: none;
   color: white;
 }
@@ -65,7 +67,7 @@ a:active {
   display: flex;
   justify-content: end;
 }
-.nav-menus a,
+.nav-menus a:link,
 .nav-menus a:hover,
 .nav-menus a:active,
 .nav-menus a:visited {
@@ -78,6 +80,23 @@ a:active {
 }
 .nav-menu:hover {
   border-bottom: 1px solid rgb(255, 193, 7);
+}
+.bt-nav {
+  border-color: white;
+  outline: none;
+  display: flex;
+  align-items: center;
+}
+.bt-nav:active {
+  border-color: white;
+  outline: none;
+}
+.bt-nav span {
+  border-color: white;
+  color: white;
+}
+.container-nav-bt {
+  display: hidden;
 }
 
 /* style for intro */
@@ -117,6 +136,42 @@ a:active {
   border: 25px solid rgba(109, 71, 0, 0.5);
 }
 
+/* style project made  */
+.project-content {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.project-menu {
+  height: 200px;
+  margin: 10px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.project-menu img {
+  width: 100%;
+  height: 100%;
+}
+.project-info {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: relative;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.project-menu:nth-child(1):hover .project-info {
+  animation: move-pr-info 600ms forwards;
+}
+.project-menu:nth-child(2):hover .project-info {
+  animation: move-pr-info 600ms forwards;
+}
+
 /* style contact me */
 .contact-info {
   display: flex;
@@ -134,6 +189,15 @@ a:active {
   cursor: pointer;
 }
 
+@keyframes move-pr-info {
+  0% {
+    transform: translateY(-200px) translateX(700px);
+  }
+  100% {
+    transform: translateY(-200px) translateX(0);
+  }
+}
+
 @media screen and (max-width: 1300px) {
   .div-size {
     width: 70%;
@@ -147,12 +211,26 @@ a:active {
     margin: 0 auto;
     color: white;
   }
+  .project-content {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
   .div-size {
     width: 90%;
     margin: 0 auto;
     color: white;
+  }
+  .container-nav-bt {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+  }
+  .nav-ul {
+    flex-direction: column;
   }
 }
 @media screen and (max-width: 650px) {
@@ -200,5 +278,11 @@ a:active {
   }
   .icon {
     display: none;
+  }
+  .project-content {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }
